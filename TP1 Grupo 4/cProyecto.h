@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "cJefes.h"
+#include "cEntregas.h"
 
 using namespace std;
 
@@ -14,9 +16,11 @@ private:
 	int ID_Proyecto;
 	eEstado estado;
 	int Etapa;
+	cJefes* lider;
+	cEntregas ** ListaEntregasRealizadas;
 
 public:
-	cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa);
+	cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa, cJefes* Lider);
 	~cProyecto();
 	void ReasignarProyecto();
 	void RecibirEntrega();
