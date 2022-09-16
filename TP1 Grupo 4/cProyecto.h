@@ -22,7 +22,7 @@ private:
 public:
 	cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa, cJefes* Lider);
 	~cProyecto();
-	void ReasignarProyecto();
+	void ReasignarProyecto(cJefes* NuevoLider);
 	void RecibirEntrega();
 };
 
