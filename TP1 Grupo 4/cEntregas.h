@@ -11,8 +11,9 @@ private:
 	int ID_Proyecto;
 	//Fecha
 	bool Aceptada;
+	int CantEntregas;
 public:
-	cEntregas();
+	cEntregas(int Num_Etapa, int ID, bool Aceptada);
 	~cEntregas();
 	void Actualizar();
 };
