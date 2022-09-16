@@ -6,7 +6,7 @@
 
 using namespace std;
 
-cProyecto::cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa)
+cProyecto::cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa, cJefes* Lider)
 {
 	this-> Nombre = Nombre;
 	this-> ID_Proyecto = ID_Proyecto;
@@ -14,6 +14,8 @@ cProyecto::cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa)
 	this-> Etapa = etapa;
 	//deberiamos agregar un enum para las etapas, o definir que representa cada numero, si es así siempre inicializariamos la etapa como 0
 	//Etapa=0;
+	
+	this-> Lider= Lider
 	
 	ListaEntregasRealizadas = new cEntregas * [maxproyectos];
 	for (int i = 0; i < maxproyectos; i++)
