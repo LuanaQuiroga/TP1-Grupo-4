@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "cJefes.h"
 
 using namespace std;
 
@@ -11,8 +12,9 @@ private:
 	int ID_Proyecto;
 	//Fecha
 	bool Aceptada;
+	int CantEntregas;
 public:
-	cEntregas();
+	cEntregas(int Num_Etapa, int ID, bool aceptada);
 	~cEntregas();
 	void Actualizar();
 };

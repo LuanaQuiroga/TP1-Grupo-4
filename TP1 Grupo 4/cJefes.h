@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string.h>
-
+#include "cProgramadores.h"
+#include "cProyecto.h"
 using namespace std;
 
 class cJefes
@@ -12,12 +13,14 @@ private:
 	int DNI;
 	string Telefono;
 	bool Disponible;
-	//MaximoProyectos
+	int MaximoProyectos;
+	cProgramadores** ListaProgramadores;
+	cProyecto** ListaProyectos;
 public:
-	cJefes();
+	cJefes(string nombre, string apellido, int dni, string tel, bool disponible, int maxproyectos);
 	~cJefes();
-	void AsignarProyecto();
-	void ReasignarProgramador();
+	void AsignarProyecto(cProyecto proyecto);
+	void ReasignarProgramador(cJefes* nuevojefe);
 	void RevisarEntrega();
 	void FinProyecto();
 	void CambiarFechadeFin();

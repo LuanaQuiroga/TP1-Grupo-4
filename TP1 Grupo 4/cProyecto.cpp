@@ -6,13 +6,36 @@
 
 using namespace std;
 
-cProyecto::cProyecto(string Nombre, int ID_Proyecto, eEstado estado, int Etapa)
+cProyecto::cProyecto(cJefes* Lider, string Nom, int ID, eEstado est)
 {
-	this-> string Nombre = _nombre;
-	this-> int ID_Proyecto = _id;
-	this-> eEstado estado = _estado;
-	this-> int Etapa = _etapa;
+	this->lider = Lider;
+	this->Nombre = Nom;
+	this->ID_Proyecto = ID;
+	this->estado = est;
+	this->Etapa = 0;
+
+	ListaEntregasRealizadas = new cEntregas * [maxproyectos];
+	for (int i = 0; i < maxproyectos; i++)
+	{
+		ListaProyectos[i] = NULL;
+	}
 
 }
 
-cProyecto::~cProyecto() {}
+cProyecto::~cProyecto()
+{
+
+
+}
+
+void cProyecto::ReasignarProyecto(cJefes* NuevoLider)
+{
+	this->lider = NuevoLider;
+
+}
+
+void cProyecto::RecibirEntrega()
+{
+
+
+}

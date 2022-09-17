@@ -15,7 +15,7 @@ private:
 	eHorario horario;
 	bool Disponible;
 public:
-	cProgramadores();
+	cProgramadores(string nombre, string apellido, string telefono, eHorario Hora, bool disponible);
 	~cProgramadores();
 	void AsignarProyecto();
 	void EntregarProyecto();
