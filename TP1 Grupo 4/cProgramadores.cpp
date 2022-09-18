@@ -32,3 +32,4 @@ void cProgramadores::FinProyecto()
 {//Quita el puntero correspondiente al proyecto finalizado (NO LO ELIMINA) y lo devuelve por izquierda.
 
 }
+
