@@ -3,6 +3,7 @@
 #include <string.h>
 #include "cJefes.h"
 #include "cEntregas.h"
+#include "cFecha.h"
 using namespace std;
 
 enum eEstado { ESPERA, DESARROLLO, FINALIZADO };
@@ -11,7 +12,8 @@ class cProyecto
 {
 private:
 	string Nombre;
-	//Fechas
+	cFecha* FechaInicio;
+	cFecha* FechaFin;
 	int ID_Proyecto;
 	eEstado estado;
 	int Etapa;

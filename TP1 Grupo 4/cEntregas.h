@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string.h>
 #include "cJefes.h"
+#include "cFecha.h"
 
 using namespace std;
 
@@ -10,7 +11,7 @@ class cEntregas
 private:
 	int Num_Etapa;
 	int ID_Proyecto;
-	//Fecha
+	cFecha* FechaEntrega;
 	bool Aceptada;
 	int CantEntregas;
 public:

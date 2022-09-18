@@ -28,14 +28,15 @@ cProyecto::~cProyecto()
 
 }
 
-void cProyecto::ReasignarProyecto(cJefes* NuevoLider)
-{
+void cProyecto::ReasignarProyecto(cJefes* NuevoLider) 
+{//Reapunta el puntero Líder al nuevo jefe del proyecto que recibe por parámetro.
+
 	this->lider = NuevoLider;
 
 }
 
 void cProyecto::RecibirEntrega()
-{
+{//Agrega la entrega a la lista
 
 
 }

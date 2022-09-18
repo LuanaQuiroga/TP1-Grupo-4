@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "cFecha.h"
 
 using namespace std;
 enum eHorario {FULLTIME, PARTTIME};
@@ -10,7 +11,7 @@ class cProgramadores
 private:
 	string Nombre;
 	string Apellido;
-	//Fecha
+	cFecha* FechaNacimiento;
 	string Telefono;
 	eHorario horario;
 	bool Disponible;
