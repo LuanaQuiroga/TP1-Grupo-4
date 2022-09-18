@@ -3,6 +3,7 @@
 #include <string.h>
 #include "cJefes.h"
 #include "cFecha.h"
+#include "Lista.h"
 
 using namespace std;
 

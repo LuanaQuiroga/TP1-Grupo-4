@@ -1,5 +1,4 @@
 #include "cProyecto.h"
-
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -14,10 +13,10 @@ cProyecto::cProyecto(cJefes* Lider, string Nom, int ID, eEstado est)
 	this->estado = est;
 	this->Etapa = 0;
 
-	ListaEntregasRealizadas = new cEntregas * [maxproyectos];
+	lista = new cEntregas * [maxproyectos];
 	for (int i = 0; i < maxproyectos; i++)
 	{
-		ListaProyectos[i] = NULL;
+		lista[i] = NULL;
 	}
 
 }

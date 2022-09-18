@@ -3,6 +3,7 @@
 #include <string.h>
 #include "cProgramadores.h"
 #include "cProyecto.h"
+#include "Lista.h"
 using namespace std;
 
 class cJefes

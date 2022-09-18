@@ -4,6 +4,7 @@
 #include "cJefes.h"
 #include "cEntregas.h"
 #include "cFecha.h"
+#include "Lista.h"
 using namespace std;
 
 enum eEstado { ESPERA, DESARROLLO, FINALIZADO };
@@ -18,7 +19,7 @@ private:
 	eEstado estado;
 	int Etapa;
 	cJefes* lider;
-	cEntregas** ListaEntregasRealizadas;
+	cEntregas** lista;
 
 public:
 	cProyecto(cJefes* Lider, string Nom, int ID, eEstado est);

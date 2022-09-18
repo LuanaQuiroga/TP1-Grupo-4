@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string.h>
 #include "cFecha.h"
+#include "Lista.h"
 
 using namespace std;
 enum eHorario {FULLTIME, PARTTIME};
