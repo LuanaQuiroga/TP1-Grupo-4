@@ -6,6 +6,11 @@
 
 int main() {
 
+	//char* newFechaInicio = ctime(&FechaInicio);
+	//char* newFechaFin = ctime(&FechaFin);
+	//char* newFechaEntrega = ctime(&FechaEntrega);
+	//char* newFechaNacimiento = ctime(&FechaNacimiento);
+
 	cProyecto* proyecto1 = new cProyecto();
 	cJefes* jefe1 = new cJefes();
 	cProgramadores* programador1 = new cProgramadores();

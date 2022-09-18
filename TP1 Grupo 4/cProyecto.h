@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include <ctime>
 #include "cJefes.h"
 #include "cEntregas.h"
-#include "cFecha.h"
 #include "Lista.h"
 using namespace std;
 
@@ -13,8 +13,8 @@ class cProyecto
 {
 private:
 	string Nombre;
-	cFecha* FechaInicio;
-	cFecha* FechaFin;
+	time_t FechaInicio = time(0); 
+	time_t FechaFin = time(0);
 	int ID_Proyecto;
 	eEstado estado;
 	int Etapa;
@@ -22,7 +22,7 @@ private:
 	cEntregas** lista;
 
 public:
-	cProyecto(cJefes* Lider, string Nom, int ID, eEstado est);
+	cProyecto(cJefes* Lider, string Nom, int ID, eEstado est, int etapa, time_t FechaInicio, time_t FechaFin);
 	~cProyecto();
 	void ReasignarProyecto(cJefes* NuevoLider);
 	void RecibirEntrega();

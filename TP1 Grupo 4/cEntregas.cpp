@@ -1,11 +1,13 @@
 #include "cEntregas.h"
 
 
-cEntregas::cEntregas(int num_etapa, int ID, bool aceptada)
+cEntregas::cEntregas(int num_etapa, int ID, bool aceptada, int CantEntregas, time_t FechaEntrega)
 {
 	this->Num_Etapa = num_etapa;
 	this->ID_Proyecto = ID;
 	this->Aceptada = aceptada;
+	this->CantEntregas = CantEntregas;
+	this->FechaEntrega = FechaEntrega;
 }
 cEntregas::~cEntregas() {}
 

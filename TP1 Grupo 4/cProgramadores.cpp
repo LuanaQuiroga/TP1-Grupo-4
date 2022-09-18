@@ -6,13 +6,14 @@
 
 using namespace std;
 
-cProgramadores::cProgramadores(string nombre, string apellido, string telefono, eHorario Hora, bool disponible)
+cProgramadores::cProgramadores(string nombre, string apellido, string telefono, eHorario Hora, bool disponible, time_t FechaNacimiento)
 {
 	this->Nombre = nombre;
 	this->Apellido = apellido;
 	this->Telefono = telefono;
 	this->horario = Hora;
 	this->Disponible = disponible;
+	this->FechaNacimiento = FechaNacimiento;
 
 }
 

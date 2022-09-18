@@ -5,13 +5,16 @@
 
 using namespace std;
 
-cProyecto::cProyecto(cJefes* Lider, string Nom, int ID, eEstado est)
+cProyecto::cProyecto(cJefes* Lider, string Nom, int ID, eEstado est, int etapa, time_t FechaInicio, time_t FechaFin)
 {
 	this->lider = Lider;
 	this->Nombre = Nom;
 	this->ID_Proyecto = ID;
 	this->estado = est;
 	this->Etapa = 0;
+	this->FechaInicio = FechaInicio;
+	this->FechaInicio = FechaFin;
+
 
 	lista = new cEntregas * [maxproyectos];
 	for (int i = 0; i < maxproyectos; i++)
