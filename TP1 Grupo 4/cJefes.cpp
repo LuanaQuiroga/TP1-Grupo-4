@@ -9,6 +9,7 @@ cJefes::cJefes(string nombre, string apellido, int dni, string tel, bool disponi
 	this->Telefono = tel;
 	this->Disponible = disponible;
 	this->MaximoProyectos = maxproyectos;
+	cantproyectos=0;
 
 	ListaProyectos = new cProyecto * [maxproyectos];
 	for (int i = 0; i < maxproyectos; i++)
@@ -25,12 +26,13 @@ cJefes::cJefes(string nombre, string apellido, int dni, string tel, bool disponi
 }
 cJefes::~cJefes() {}
 
-void cJefes::AsignarProyecto(cProyecto proyecto)
-{//Recibe un proyecto y se agrega a la lista si el jefe está disponible, en caso contrario imprime en pantalla “{ nombre } {apellido} no está
-	//disponible”.No olvidar actualizar las atributos funcionales del jefe.
+void cJefes::AsignarProyecto(cProyecto *proyecto)
+{//Recibe un proyecto y se agrega a la lista si el jefe estÃ¡ disponible, en caso contrario imprime en pantalla â€œ{ nombre } {apellido} no estÃ¡
+	//disponibleâ€.No olvidar actualizar las atributos funcionales del jefe.
 
 	if (Disponible == 1)
 	{
+		ListaProyectos[cantproyectos]=proyecto;
 
 
 
@@ -38,32 +40,38 @@ void cJefes::AsignarProyecto(cProyecto proyecto)
 	}
 	else
 	{
+		
+		cout << Nombre  << Apellido << "no esta disponible";
 
-
-
-		//imprimir “ {nombre} {apellido} no está disponible
+		//imprimir â€œ {nombre} {apellido} no estÃ¡ disponible
 
 	//ver longitud de la lista y comparar con maximo de proyectos 
 	}
+	
+	if(cantproyectos==maxproyectos)
+	{
+		Disponible==0;
+	}
+		
 
 }
 
 void cJefes::ReasignarProgramador(cJefes* nuevojefe)
-{//recibe al nuevo jefe del programador por parámetro, lo quita de la lista de programados y se lo asigna a uno nuevo.
+{//recibe al nuevo jefe del programador por parÃ¡metro, lo quita de la lista de programados y se lo asigna a uno nuevo.
 
 
 }
 
 void cJefes::RevisarEntrega()
-{//Si el proyecto efectivamente está a cargo del jefe, se envían los datos al proyecto(Recibir Entrega).Actualiza los datos del proyecto
- //(cambia / etapa estado) y llama a RecibirEntrega de proyecto.En caso de tratarse 		de la segunda entrega, se verifica que la primera esté lista.La probabilidad de
+{//Si el proyecto efectivamente estÃ¡ a cargo del jefe, se envÃ­an los datos al proyecto(Recibir Entrega).Actualiza los datos del proyecto
+ //(cambia / etapa estado) y llama a RecibirEntrega de proyecto.En caso de tratarse 		de la segunda entrega, se verifica que la primera estÃ© lista.La probabilidad de
 	//que la entrega sea aceptada es del 50 % .
 
 
 }
 
 void cJefes::FinProyecto()
-{//Se llama a este método en caso de haber finalizado todas las etapas del proyecto para quitar el puntero correspondiente del jefe(NO LO
+{//Se llama a este mÃ©todo en caso de haber finalizado todas las etapas del proyecto para quitar el puntero correspondiente del jefe(NO LO
 	//ELIMINA) y lo devuelve por izquierda.
 
 
