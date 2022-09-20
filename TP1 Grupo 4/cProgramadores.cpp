@@ -19,14 +19,22 @@ cProgramadores::cProgramadores(string nombre, string apellido, string telefono, 
 
 cProgramadores::~cProgramadores() {}
 
-void cProgramadores::AsignarProyecto()
-{//Recibe el proyecto por parámetro y se añade a la lista si el programador está disponible
+void cProgramadores::AsignarProyecto(cProyecto * proyecto)
+{//Recibe el proyecto por parÃ¡metro y se aÃ±ade a la lista si el programador estÃ¡ disponible
+	if(Disponible==1)
+	{
+		
+		
+	}
 
+		
+	
 
 }
 
 void cProgramadores::EntregarProyecto() 
-{//recibe una entrega, llama al método Revisar Entrega del jefe.Se actualiza la fecha de última entrega.
+{//recibe una entrega, llama al mÃ©todo Revisar Entrega del jefe.Se actualiza la fecha de Ãºltima entrega.
+	
 
 }
 void cProgramadores::FinProyecto() 
